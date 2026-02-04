@@ -8,6 +8,22 @@ This file provides context for Claude Code when working on this project.
 
 See [SPECIFICATION.md](./SPECIFICATION.md) for the full specification.
 
+## Project Constraints
+
+**MUST follow these rules:**
+
+1. **No direct push to main** - Always create a feature branch and submit a PR
+2. **Run `gofmt -w .`** before every commit
+3. **Run `golangci-lint run`** before every commit - fix all errors
+4. **Run `go build ./...`** before every commit - ensure code compiles
+
+```bash
+# Before committing, always run:
+gofmt -w .
+golangci-lint run
+go build ./...
+```
+
 ## Quick Reference
 
 ### Technology Stack
